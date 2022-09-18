@@ -206,7 +206,7 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
+              height: 200.0,
               child: GridView.count(
                 padding: EdgeInsets.all(10.0),
                 crossAxisSpacing: 5,
@@ -307,6 +307,168 @@ class HomeScreen extends StatelessWidget {
                         )
                       ],
                     ),
+                  ),
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/desserts.png',
+                          width: 50,
+                          height: 50,
+                        ),
+                        Text(
+                          'Desserts',
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/drinks.png',
+                          width: 50,
+                          height: 50,
+                        ),
+                        Text(
+                          'Drinks',
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/more-foods.png',
+                          width: 50,
+                          height: 50,
+                        ),
+                        Text(
+                          'More',
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Discount Gauranteed',
+                    style:
+                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'See All',
+                    style: TextStyle(
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 200.0,
+              child: ListView(
+                // This next line does the trick.
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.all(10.0),
+                    width: 230.0,
+                    child: Image.asset("assets/onboard1bg.png"),
+
+                    decoration: BoxDecoration(
+                      color: Colors.green.shade600,
+                      image: const DecorationImage(
+                        image: NetworkImage(''),
+                        fit: BoxFit.cover,
+                      ), //DecorationImage//Border.all
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.shade200,
+                          offset: const Offset(
+                            2.0,
+                            2.0,
+                          ), //Offset
+                          blurRadius: 8.0,
+                          spreadRadius: 1.0,
+                        ), //BoxShadow                        //BoxShadow
+                      ],
+                    ), //BoxDecoratio
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10.0),
+                    width: 230.0,
+                    child: Image.asset("assets/onboard4bg.png"),
+
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey.shade800,
+                      image: const DecorationImage(
+                        image: NetworkImage(''),
+                        fit: BoxFit.cover,
+                      ), //DecorationImage//Border.all
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.shade200,
+                          offset: const Offset(
+                            2.0,
+                            2.0,
+                          ), //Offset
+                          blurRadius: 8.0,
+                          spreadRadius: 1.0,
+                        ), //BoxShadow                        //BoxShadow
+                      ],
+                    ), //BoxDecoratio
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10.0),
+                    width: 230.0,
+                    child: Image.asset("assets/onboard2bg.png"),
+
+                    decoration: BoxDecoration(
+                      color: Colors.indigo.shade600,
+                      image: const DecorationImage(
+                        image: NetworkImage(''),
+                        fit: BoxFit.cover,
+                      ), //DecorationImage//Border.all
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.shade200,
+                          offset: const Offset(
+                            2.0,
+                            2.0,
+                          ), //Offset
+                          blurRadius: 8.0,
+                          spreadRadius: 1.0,
+                        ), //BoxShadow                        //BoxShadow
+                      ],
+                    ), //BoxDecoratio
                   ),
                 ],
               ),
