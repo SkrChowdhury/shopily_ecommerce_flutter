@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 10.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             'Deliver to',
                             style: TextStyle(
@@ -146,7 +146,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     'Special Offers',
                     style:
@@ -173,7 +173,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       '30%',
                       style: TextStyle(
                           color: Colors.white,
@@ -186,7 +186,7 @@ class HomeScreen extends StatelessWidget {
                         'Discount only valid for today!'.toUpperCase(),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.bold),
@@ -224,7 +224,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'Burgers',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -243,7 +243,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'Pizzas',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -262,7 +262,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'Noodles',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -281,7 +281,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'Meat',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -300,7 +300,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'Vegetables',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -319,7 +319,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'Desserts',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -338,7 +338,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'Drinks',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -357,7 +357,7 @@ class HomeScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        Text(
+                        const Text(
                           'More',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -372,7 +372,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     'Discount Gauranteed',
                     style:
@@ -390,85 +390,400 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: 200.0,
+              height: 240.0,
               child: ListView(
                 // This next line does the trick.
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.all(10.0),
-                    width: 230.0,
-                    child: Image.asset("assets/onboard1bg.png"),
-
+                    margin: EdgeInsets.only(right: 20.0),
                     decoration: BoxDecoration(
-                      color: Colors.green.shade600,
-                      image: const DecorationImage(
-                        image: NetworkImage(''),
-                        fit: BoxFit.cover,
-                      ), //DecorationImage//Border.all
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.green.shade200,
-                          offset: const Offset(
-                            2.0,
-                            2.0,
-                          ), //Offset
-                          blurRadius: 8.0,
-                          spreadRadius: 1.0,
-                        ), //BoxShadow                        //BoxShadow
+                          color: Colors.cyan.withOpacity(.1),
+                          spreadRadius: 1,
+                          blurRadius: 1,
+                          offset: Offset(0, 1), // changes position of shadow
+                        ),
                       ],
-                    ), //BoxDecoratio
+                    ),
+                    padding: EdgeInsets.all(10.0),
+                    width: 200.0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 140.0,
+                          margin: EdgeInsets.only(bottom: 5.0),
+                          child: Image.asset("assets/onboard1bg.png"),
+                          decoration: BoxDecoration(
+                            color: Colors.green.shade600,
+                            image: const DecorationImage(
+                              image: NetworkImage(''),
+                              fit: BoxFit.cover,
+                            ), //DecorationImage//Border.all
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.green.shade200,
+                                offset: const Offset(
+                                  2.0,
+                                  2.0,
+                                ), //Offset
+                                blurRadius: 8.0,
+                                spreadRadius: 1.0,
+                              ), //BoxShadow                        //BoxShadow
+                            ],
+                          ), //BoxDecoratio
+                        ),
+                        const Text(
+                          'Mixed Salad Bomb',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                              overflow: TextOverflow.ellipsis),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text(
+                              '1.5 km',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12.0,
+                              ),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  border: Border(
+                                      left: BorderSide(
+                                          color: Colors.black54, width: 2))),
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 5.0, horizontal: 12.0),
+                              padding: EdgeInsets.only(left: 10.0),
+                              child: const Text(
+                                '4.8 (12k)',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 12.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              child: const Text(
+                                '\$6.00',
+                                style: TextStyle(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24.0),
+                              ),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  border: Border(
+                                      left: BorderSide(
+                                          color: Colors.black54, width: 2))),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
+                              child: RichText(
+                                textAlign: TextAlign.center,
+                                text: const TextSpan(
+                                  children: [
+                                    WidgetSpan(
+                                      child: Padding(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 2.0),
+                                        child: Icon(
+                                          Icons.bike_scooter_rounded,
+                                          color: Colors.green,
+                                          size: 20.0,
+                                        ),
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: "\$2.00 ",
+                                      style: TextStyle(
+                                          color: Colors.black87,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            const Icon(
+                              Icons.favorite_rounded,
+                              color: Colors.red,
+                              size: 24.0,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(10.0),
-                    width: 230.0,
-                    child: Image.asset("assets/onboard4bg.png"),
-
+                    margin: EdgeInsets.only(right: 20.0),
                     decoration: BoxDecoration(
-                      color: Colors.blueGrey.shade800,
-                      image: const DecorationImage(
-                        image: NetworkImage(''),
-                        fit: BoxFit.cover,
-                      ), //DecorationImage//Border.all
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.green.shade200,
-                          offset: const Offset(
-                            2.0,
-                            2.0,
-                          ), //Offset
-                          blurRadius: 8.0,
-                          spreadRadius: 1.0,
-                        ), //BoxShadow                        //BoxShadow
+                          color: Colors.cyan.withOpacity(.1),
+                          spreadRadius: 1,
+                          blurRadius: 1,
+                          offset: Offset(0, 1), // changes position of shadow
+                        ),
                       ],
-                    ), //BoxDecoratio
+                    ),
+                    padding: EdgeInsets.all(10.0),
+                    width: 200.0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 140.0,
+                          margin: EdgeInsets.only(bottom: 5.0),
+                          child: Image.asset("assets/onboard4bg.png"),
+                          decoration: BoxDecoration(
+                            color: Colors.teal.shade500,
+                            image: const DecorationImage(
+                              image: NetworkImage(''),
+                              fit: BoxFit.cover,
+                            ), //DecorationImage//Border.all
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.teal.shade200,
+                                offset: const Offset(
+                                  2.0,
+                                  2.0,
+                                ), //Offset
+                                blurRadius: 8.0,
+                                spreadRadius: 1.0,
+                              ), //BoxShadow                        //BoxShadow
+                            ],
+                          ), //BoxDecoratio
+                        ),
+                        const Text(
+                          'Mixed Salad Bomb',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                              overflow: TextOverflow.ellipsis),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text(
+                              '1.5 km',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12.0,
+                              ),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  border: Border(
+                                      left: BorderSide(
+                                          color: Colors.black54, width: 2))),
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 5.0, horizontal: 12.0),
+                              padding: EdgeInsets.only(left: 10.0),
+                              child: const Text(
+                                '4.8 (12k)',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 12.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              child: const Text(
+                                '\$6.00',
+                                style: TextStyle(
+                                    color: Colors.teal,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24.0),
+                              ),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  border: Border(
+                                      left: BorderSide(
+                                          color: Colors.black54, width: 2))),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
+                              child: RichText(
+                                textAlign: TextAlign.center,
+                                text: const TextSpan(
+                                  children: [
+                                    WidgetSpan(
+                                      child: Padding(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 2.0),
+                                        child: Icon(
+                                          Icons.bike_scooter_rounded,
+                                          color: Colors.teal,
+                                          size: 20.0,
+                                        ),
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: "\$2.00 ",
+                                      style: TextStyle(
+                                          color: Colors.black87,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            const Icon(
+                              Icons.favorite_border_rounded,
+                              color: Colors.red,
+                              size: 24.0,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(10.0),
-                    width: 230.0,
-                    child: Image.asset("assets/onboard2bg.png"),
-
+                    margin: EdgeInsets.only(right: 20.0),
                     decoration: BoxDecoration(
-                      color: Colors.indigo.shade600,
-                      image: const DecorationImage(
-                        image: NetworkImage(''),
-                        fit: BoxFit.cover,
-                      ), //DecorationImage//Border.all
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.green.shade200,
-                          offset: const Offset(
-                            2.0,
-                            2.0,
-                          ), //Offset
-                          blurRadius: 8.0,
-                          spreadRadius: 1.0,
-                        ), //BoxShadow                        //BoxShadow
+                          color: Colors.deepPurpleAccent.withOpacity(.1),
+                          spreadRadius: 1,
+                          blurRadius: 1,
+                          offset: Offset(0, 1), // changes position of shadow
+                        ),
                       ],
-                    ), //BoxDecoratio
+                    ),
+                    padding: EdgeInsets.all(10.0),
+                    width: 200.0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 140.0,
+                          margin: EdgeInsets.only(bottom: 5.0),
+                          child: Image.asset("assets/onboard3bg.png"),
+                          decoration: BoxDecoration(
+                            color: Colors.deepPurpleAccent.shade200,
+                            image: const DecorationImage(
+                              image: NetworkImage(''),
+                              fit: BoxFit.cover,
+                            ), //DecorationImage//Border.all
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.deepPurpleAccent.shade100,
+                                offset: const Offset(
+                                  2.0,
+                                  2.0,
+                                ), //Offset
+                                blurRadius: 8.0,
+                                spreadRadius: 1.0,
+                              ), //BoxShadow                        //BoxShadow
+                            ],
+                          ), //BoxDecoratio
+                        ),
+                        const Text(
+                          'Mixed Salad Bomb',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                              overflow: TextOverflow.ellipsis),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text(
+                              '1.5 km',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12.0,
+                              ),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  border: Border(
+                                      left: BorderSide(
+                                          color: Colors.black54, width: 2))),
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 5.0, horizontal: 12.0),
+                              padding: EdgeInsets.only(left: 10.0),
+                              child: const Text(
+                                '4.8 (12k)',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 12.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              child: const Text(
+                                '\$6.00',
+                                style: TextStyle(
+                                    color: Colors.deepPurpleAccent,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24.0),
+                              ),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  border: Border(
+                                      left: BorderSide(
+                                          color: Colors.black54, width: 2))),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 12.0),
+                              child: RichText(
+                                textAlign: TextAlign.center,
+                                text: const TextSpan(
+                                  children: [
+                                    WidgetSpan(
+                                      child: Padding(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 2.0),
+                                        child: Icon(
+                                          Icons.bike_scooter_rounded,
+                                          color: Colors.deepPurpleAccent,
+                                          size: 20.0,
+                                        ),
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: "\$2.00 ",
+                                      style: TextStyle(
+                                          color: Colors.black87,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            const Icon(
+                              Icons.favorite_rounded,
+                              color: Colors.red,
+                              size: 24.0,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
