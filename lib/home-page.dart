@@ -788,6 +788,142 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'Discount Gauranteed',
+                    style:
+                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'See All',
+                    style: TextStyle(
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 50.0,
+              child: ListView(
+                // This next line does the trick.
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.green),
+                      height: 50,
+                      width: 100,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.all_out_sharp,
+                              size: 30,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              'All',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )
+                          ]),
+                    ),
+                  ),
+                  GestureDetector(
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.green, width: 2),
+                      ),
+                      height: 50,
+                      width: 110,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.bug_report_sharp,
+                              size: 30,
+                              color: Colors.green,
+                            ),
+                            Text(
+                              'Burgers',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green),
+                            )
+                          ]),
+                    ),
+                  ),
+                  GestureDetector(
+                    child: Container(
+                      margin: EdgeInsets.only(right: 10.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.green, width: 2),
+                      ),
+                      height: 50,
+                      width: 110,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.account_circle_outlined,
+                              size: 30,
+                              color: Colors.green,
+                            ),
+                            Text(
+                              'Pizza',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green),
+                            )
+                          ]),
+                    ),
+                  ),
+                  GestureDetector(
+                    child: Container(
+                      margin: EdgeInsets.only(right: 10.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.green, width: 2),
+                      ),
+                      height: 50,
+                      width: 140,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.add_location,
+                              size: 30,
+                              color: Colors.green,
+                            ),
+                            Text(
+                              'Vegetables',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green),
+                            )
+                          ]),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
