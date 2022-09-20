@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:searchbar_animation/searchbar_animation.dart';
 
+import 'cart.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -98,7 +100,10 @@ class HomeScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 0.0),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => CartScreen()));
+                        },
                         child: Icon(Icons.shopping_cart, color: Colors.green),
                         style: ElevatedButton.styleFrom(
                           shape: CircleBorder(),
